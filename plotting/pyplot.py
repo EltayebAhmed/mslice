@@ -17,8 +17,6 @@ def gcf():
     return FigureManager.get_active_figure().get_figure()
 
 
-
-
 def draw_colorbar(function):
     def wrapper(*args, **kwargs):
         function(*args, **kwargs)
@@ -197,6 +195,7 @@ def tripcolor(*args, **kwargs):
 @script_log(module_name)
 def xlabel(s, *args, **kwargs):
     """
+    Set the *x* axis label of the current axis.
     Set the *x* axis label of the current axis.
 
     Default override is::
