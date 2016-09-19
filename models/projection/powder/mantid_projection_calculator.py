@@ -12,7 +12,8 @@ class MantidProjectionCalculator(ProjectionCalculator):
     def calculate_projection(self, input_workspace, axis1, axis2):
         if axis1 == '|Q|' and axis2 == 'Energy':
             output_workspace = input_workspace + '_QE'
-            ConvertToMD(InputWorkspace=input_workspace, OutputWorkspace=output_workspace, QDimensions='|Q|',
+
+            return ConvertToMD(InputWorkspace=input_workspace, OutputWorkspace=output_workspace, QDimensions='|Q|',
                         PreprocDetectorsWS='-')
 
         elif axis1 == 'Energy' and axis2 == '|Q|':
